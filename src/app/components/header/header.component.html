@@ -1,0 +1,51 @@
+<div class="header">
+    <div class="app-name">
+        <button (click)="toggleSidebar()" class="dashboard-toggle-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <span>AgriSmart</span>
+    </div>
+    <div class="navigation">
+        <!-- Existing Navigation Items -->
+        <div class="nav-item" (mouseover)="showDropdown('dashboardDropdown')" (mouseout)="hideDropdown('dashboardDropdown')">
+            <span>Farmer Dashboard</span>
+            <div id="dashboardDropdown" class="dropdown-content">
+                <a routerLink="/profile">Profile</a>
+                <a routerLink="/crop-tracking">Crop Tracking</a>
+                <a routerLink="/weather">Weather Widget</a>
+                <a routerLink="/recommendations">Recommendations</a>
+            </div>
+        </div>
+
+        <div class="nav-item" (mouseover)="showDropdown('marketplaceDropdown')" (mouseout)="hideDropdown('marketplaceDropdown')">
+            <span>Marketplace</span>
+            <div id="marketplaceDropdown" class="dropdown-content">
+                <a routerLink="/marketplace/products">Products</a>
+                <a routerLink="/marketplace/transactions">Transactions</a>
+            </div>
+        </div>
+
+        <div class="nav-item" (mouseover)="showDropdown('communityDropdown')" (mouseout)="hideDropdown('communityDropdown')">
+            <span>Community Collaboration</span>
+            <div id="communityDropdown" class="dropdown-content">
+                <a routerLink="/community/forums">Forums</a>
+            </div>
+        </div>
+
+        <div class="nav-item" (mouseover)="showDropdown('knowledgeHubDropdown')" (mouseout)="hideDropdown('knowledgeHubDropdown')">
+            <span>Knowledge Hub</span>
+            <div id="knowledgeHubDropdown" class="dropdown-content">
+                <a routerLink="/knowledge-hub/articles">Articles</a>
+                <a routerLink="/knowledge-hub/expert-advice">Expert Advice</a>
+                <a routerLink="/knowledge-hub/faq">FAQ</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Signup and Login Buttons -->
+    <div class="nav-item">
+        <a routerLink="/signup" class="auth-btn">Sign Up</a>
+        <a routerLink="login" class="auth-btn">Login</a>
+    </div>
+
+</div>
