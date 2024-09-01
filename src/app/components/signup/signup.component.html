@@ -1,0 +1,33 @@
+<div class="signup-container">
+    <div class="signup-form">
+      <h2>Join AgriSmart</h2>
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="userName">Username</label>
+          <input id="userName" type="text" formControlName="userName" placeholder="Enter your username" />
+        </div>
+  
+        <div class="form-group">
+          <label for="userEmail">Email</label>
+          <input id="userEmail" type="email" formControlName="userEmail" placeholder="Enter your email" />
+        </div>
+  
+        <div class="form-group">
+          <label for="upassword">Password</label>
+          <input id="upassword" type="password" formControlName="upassword" placeholder="Enter your password" />
+        </div>
+  
+        <div class="form-group">
+          <label for="roleName">Role</label>
+          <select id="roleName" formControlName="roleName">
+            <option value="Farmer">Farmer</option>
+            <option value="Farm Expert">Farm Expert</option>
+            <option value="Consumer">Consumer</option>
+          </select>
+        </div>
+  
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+  
