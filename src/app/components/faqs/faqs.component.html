@@ -1,0 +1,13 @@
+<div class="faq-list">
+    <h2>Frequently Asked Questions</h2>
+    <div *ngFor="let faq of faqs" class="faq-item">
+      <button (click)="toggleAnswer(faq.id)" class="faq-question">
+        <i [ngClass]="{'fas fa-chevron-down': !faq.isExpanded, 'fas fa-chevron-up': faq.isExpanded}"></i>
+        {{ faq.question }}
+      </button>
+      <div *ngIf="faq.isExpanded" class="faq-answer">
+        <p>{{ faq.answer }}</p>
+      </div>
+    </div>
+  </div>
+  

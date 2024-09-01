@@ -1,0 +1,104 @@
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #0a5757e3;
+  color: #ffffff; /* Light text color for contrast */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 101;
+  transition: width 0.3s ease; /* Smooth transition for width change */
+}
+
+/* Title Styling */
+.sidebar-title {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Navigation List Styling */
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* Navigation Item Styling */
+.nav-item {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Navigation Link Styling */
+.nav-link {
+  color: #ffffff; /* White text color */
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+/* Icon Styling */
+.nav-link i {
+  margin-right: 10px;
+}
+
+/* Hover Effect for Links */
+.nav-link:hover {
+  background-color: #004d40; /* Darker teal for hover effect */
+}
+
+/* Active Link Styling */
+.nav-link.active {
+  background-color: #004d40; /* Darker teal for active link */
+  color: #ffffff; /* White text for active link */
+}
+
+/* Responsive Adjustments */
+
+/* Large screens (desktops) */
+@media (min-width: 1200px) {
+  .sidebar {
+      width: 250px; /* Standard width */
+  }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1199px) {
+  .sidebar {
+      width: 200px; /* Slightly narrower width for tablets */
+  }
+}
+
+/* Small screens (mobile phones) */
+@media (max-width: 768px) {
+  .sidebar {
+      width: 100%; /* Full width on small screens */
+      height: auto; /* Auto height to fit content */
+      position: relative; /* Relative positioning for small screens */
+  }
+
+  .nav-link {
+      font-size: 1em; /* Smaller font size for smaller screens */
+      padding: 8px;
+  }
+}
+
+/* Extra small screens (very small devices) */
+@media (max-width: 480px) {
+  .nav-link {
+      font-size: 0.9em; /* Even smaller font size */
+      padding: 6px; /* Smaller padding */
+  }
+}

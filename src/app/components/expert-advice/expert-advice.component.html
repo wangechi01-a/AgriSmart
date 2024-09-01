@@ -1,0 +1,31 @@
+<div class="expert-advice">
+    <div class="advice-list" *ngIf="!selectedAdvice">
+      <h2>Expert Advice</h2>
+      <ul class="advice-list-items">
+        <li *ngFor="let advice of adviceList" class="advice-item" (click)="viewAdvice(advice)">
+          <h3>{{ advice.title }}</h3>
+          <p>{{ advice.summary }}</p>
+        </li>
+      </ul>
+    </div>
+  
+    <div class="advice-detail" *ngIf="selectedAdvice">
+      <h2>{{ selectedAdvice.title }}</h2>
+      <p>{{ selectedAdvice.summary }}</p>
+      <!-- Add more detailed content here -->
+    </div>
+  
+    <div class="user-input-form">
+      <h2>Provide Your Crop Data</h2>
+      <form (ngSubmit)="submitForm()">
+        <label for="cropType">Crop Type:</label>
+        <input id="cropType" [(ngModel)]="userData.cropType" name="cropType" required>
+  
+        <label for="issues">Issues or Questions:</label>
+        <textarea id="issues" [(ngModel)]="userData.issues" name="issues" required></textarea>
+  
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  

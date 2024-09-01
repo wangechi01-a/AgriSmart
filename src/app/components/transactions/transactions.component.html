@@ -1,0 +1,16 @@
+<div class="transaction-container">
+  <h2>Product List</h2>
+  <div class="product-list">
+    <div class="product-item" *ngFor="let product of products">
+      <div class="product-info">
+        <span class="product-name">{{ product.name }}</span>
+        <span class="product-quantity">Quantity: {{ product.quantity }}</span>
+        <span class="product-cost">Cost: ${{ product.price.toFixed(2) }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="cart-icon" (click)="navigateToCart()">
+    <span class="cart-icon-text">🛒</span>
+    <span>Go to Cart</span>
+  </div>
+</div>

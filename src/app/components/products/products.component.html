@@ -1,0 +1,40 @@
+<div class="crop-upload">
+    <h2>Upload Crop Information</h2>
+    <form [formGroup]="cropForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="name">Crop Name:</label>
+        <input id="name" formControlName="name" />
+      </div>
+      <div>
+        <label for="description">Description:</label>
+        <textarea id="description" formControlName="description"></textarea>
+      </div>
+      <div>
+        <label for="type">Type:</label>
+        <select id="type" formControlName="type">
+          <option value="vegetable">Vegetable</option>
+          <option value="fruit">Fruit</option>
+          <option value="grain">Grain</option>
+        </select>
+      </div>
+      <div>
+        <label for="price">Price per Unit:</label>
+        <input id="price" formControlName="price" type="number" />
+      </div>
+      <div>
+        <label for="units">Units Available:</label>
+        <input id="units" formControlName="units" type="number" />
+      </div>
+      <div>
+        <label for="location">Location:</label>
+        <input id="location" formControlName="location" />
+      </div>
+      <div>
+        <label for="image">Crop Image:</label>
+        <input id="image" type="file" (change)="onFileChange($event)" />
+        <img *ngIf="imagePreview" [src]="imagePreview" alt="Image Preview" class="image-preview" />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  

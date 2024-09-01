@@ -1,0 +1,17 @@
+<div class="advice-feed">
+  <h2>Farming Advice Feed</h2>
+  <div class="advice-cards">
+    <div class="advice-card" *ngFor="let advice of adviceList">
+      <div class="card-header">
+        <img [src]="advice.image" alt="{{ advice.title }}" class="advice-image">
+        <div class="overlay">
+          <h3>{{ advice.title }}</h3>
+        </div>
+      </div>
+      <div class="card-body">
+        <p>{{ advice.description }}</p>
+        <button class="details-btn">Read More</button>
+      </div>
+    </div>
+  </div>
+</div>

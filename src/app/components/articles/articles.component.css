@@ -1,0 +1,54 @@
+.article-list {
+    padding: 1rem;
+  }
+  
+  .article-list h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .article-list-items {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .article-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+  
+  .article-item:hover {
+    background: #e0f7fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .article-item h3 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .article-item p {
+    margin: 0.5rem 0 1rem;
+  }
+  
+  .download-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #00796b;
+    background: #fff;
+    border: 1px solid #00796b;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .download-link:hover {
+    background: #00796b;
+    color: #fff;
+  }
+  

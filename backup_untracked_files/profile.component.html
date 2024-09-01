@@ -1,0 +1,23 @@
+<div class="profile-card">
+  <div class="profile-header">
+    <div class="profile-pic-container">
+      <img [src]="userImage" alt="User Image" class="profile-pic">
+      <button class="edit-pic-btn">
+        <i class="fas fa-camera"></i>
+      </button>
+    </div>
+    <h2>{{ userName }}</h2>
+    <p class="user-role">Farmer</p>
+  </div>
+  <div class="profile-details">
+    <div class="detail-item">
+      <i class="fas fa-envelope detail-icon"></i>
+      <p>Email: johndoe.example.com</p>
+    </div>
+    <div class="detail-item">
+      <i class="fas fa-map-marker-alt detail-icon"></i>
+      <p>Location: Nairobi, Kenya</p>
+    </div>
+    <button class="edit-profile-btn">Edit Profile</button>
+  </div>
+</div>

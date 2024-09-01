@@ -1,0 +1,100 @@
+.profile-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 400px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.profile-header {
+  position: relative;
+}
+
+.profile-pic-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4caf50;
+}
+
+.edit-pic-btn {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.edit-pic-btn:hover {
+  background-color: #388e3c;
+}
+
+h2 {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.user-role {
+  font-size: 16px;
+  color: #888;
+  margin-top: 5px;
+}
+
+.profile-details {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.detail-icon {
+  font-size: 18px;
+  color: #4caf50;
+  margin-right: 10px;
+}
+
+.edit-profile-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.edit-profile-btn:hover {
+  background-color: #388e3c;
+}
+
+@media (max-width: 600px) {
+  .profile-card {
+    padding: 20px;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}

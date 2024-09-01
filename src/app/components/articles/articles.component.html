@@ -1,0 +1,12 @@
+<div class="article-list">
+  <h2>Articles</h2>
+  <ul class="article-list-items">
+    <li *ngFor="let article of articles" class="article-item">
+      <h3>{{ article.title }}</h3>
+      <p>{{ article.summary }}</p>
+      <a [href]="article.documentUrl" download class="download-link">
+        <i class="fas fa-download"></i> Download
+      </a>
+    </li>
+  </ul>
+</div>

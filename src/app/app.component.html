@@ -1,0 +1,9 @@
+<div class="app-container">
+    <app-header (sidebarToggle)="onToggleSidebar()"></app-header>
+    <div class="main-content">
+        <!-- Sidebar only visible if isSidebarVisible is true -->
+        <app-sidebar *ngIf="isSidebarVisible"></app-sidebar>
+        <router-outlet></router-outlet>
+    </div>
+</div>
+

@@ -1,0 +1,18 @@
+<div class="cart-container">
+    <h2>Your Cart</h2>
+    <div class="cart-items">
+      <div *ngFor="let item of cartItems" class="cart-item">
+        <img [src]="item.product.imageUrl" alt="{{ item.product.name }}" class="cart-item-image">
+        <div class="cart-item-info">
+          <h3>{{ item.product.name }}</h3>
+          <p class="cart-item-price">${{ item.product.price.toFixed(2) }} x {{ item.quantity }}</p>
+          <button (click)="removeFromCart(item.product)">Remove</button>
+        </div>
+      </div>
+    </div>
+    <div class="cart-total">
+      <h3>Total: ${{ total.toFixed(2) }}</h3>
+      <button class="checkout-btn" routerLink="/checkout">Proceed to Checkout</button>
+    </div>
+  </div>
+  
