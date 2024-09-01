@@ -1,0 +1,11 @@
+<select [(ngModel)]="selectedCategory">
+    <option value="">All Categories</option>
+    <option value="sustainability">Sustainability</option>
+    <option value="techniques">Techniques</option>
+    <option value="conservation">Conservation</option>
+  </select>
+  
+  <input type="date" [(ngModel)]="selectedDate" />
+  
+  <button (click)="applyFilter()">Apply Filter</button>
+  
