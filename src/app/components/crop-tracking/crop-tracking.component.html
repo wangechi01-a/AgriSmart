@@ -1,0 +1,53 @@
+<div class="crop-tracking">
+  <h2 class="page-title">Crop Tracking</h2>
+
+  <!-- Input Form -->
+  <form [formGroup]="cropForm" (ngSubmit)="onSubmit()" class="crop-form">
+    <div class="form-group">
+      <label for="cropType">Crop Type</label>
+      <input id="cropType" formControlName="cropType" type="text" placeholder="Enter crop type">
+    </div>
+
+    <div class="form-group">
+      <label for="plantingDate">Planting Date</label>
+      <input id="plantingDate" formControlName="plantingDate" type="date">
+    </div>
+
+    <div class="form-group">
+      <label for="expectedHarvestDate">Expected Harvest Date</label>
+      <input id="expectedHarvestDate" formControlName="expectedHarvestDate" type="date">
+    </div>
+
+    <div class="form-group">
+      <label for="growthStage">Growth Stage</label>
+      <input id="growthStage" formControlName="growthStage" type="text" placeholder="Enter growth stage">
+    </div>
+
+    <div class="form-group">
+      <label for="healthStatus">Health Status</label>
+      <input id="healthStatus" formControlName="healthStatus" type="text" placeholder="Enter health status">
+    </div>
+
+    <div class="form-group">
+      <label for="notes">Notes</label>
+      <textarea id="notes" formControlName="notes" placeholder="Enter any additional notes"></textarea>
+    </div>
+
+    <button type="submit" class="btn-submit">Save Crop Data</button>
+  </form>
+
+  <!-- Display Crops -->
+  <div class="crop-list">
+    <h3>Tracked Crops</h3>
+    <div class="crop-card" *ngFor="let crop of crops">
+      <h4>{{ crop.cropType }}</h4>
+      <div class="crop-details">
+        <p><strong>Planting Date:</strong> {{ crop.plantingDate }}</p>
+        <p><strong>Expected Harvest Date:</strong> {{ crop.expectedHarvestDate }}</p>
+        <p><strong>Growth Stage:</strong> {{ crop.growthStage }}</p>
+        <p><strong>Health Status:</strong> {{ crop.healthStatus }}</p>
+        <p><strong>Notes:</strong> {{ crop.notes }}</p>
+      </div>
+    </div>
+  </div>
+</div>

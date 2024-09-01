@@ -1,0 +1,20 @@
+<div class="weather-widget">
+  <h3>Current Weather</h3>
+  <div class="weather-info">
+    <img [src]="weatherIcon" alt="Weather Icon" class="weather-icon">
+    <div class="weather-details">
+      <span class="temperature">{{ temperature }}°C</span>
+      <span class="condition">{{ condition }}</span>
+    </div>
+  </div>
+  <div class="forecast">
+    <h4>7-Day Forecast</h4>
+    <ul class="forecast-list">
+      <li *ngFor="let day of forecast">
+        <span class="forecast-date">{{ day.date }}</span>
+        <img [src]="day.icon" alt="Forecast Icon" class="forecast-icon">
+        <span class="forecast-temp">{{ day.temperature }}°C</span>
+      </li>
+    </ul>
+  </div>
+</div>
