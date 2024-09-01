@@ -1,5 +1,5 @@
 import pandas as pd
-import crop_recommendation_app as st
+import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
 
