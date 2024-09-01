@@ -1,0 +1,89 @@
+/* Reset default margin and padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif; /* Modern font for a fresh look */
+  background: #f4f4f4; /* Light background color for a clean look */
+}
+
+/* Container for signup */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Signup form */
+.signup-form {
+  background: #ffffff; /* White background for the form */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  transition: transform 0.3s ease; /* Smooth transform on hover */
+}
+
+.signup-form:hover {
+  transform: translateY(-5px); /* Lift the form slightly on hover */
+}
+
+.signup-form h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: #333; /* Dark gray for text */
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #555; /* Slightly lighter gray for labels */
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for focus effects */
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #007bff; /* Blue border on focus */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25); /* Blue shadow on focus */
+  outline: none;
+}
+
+button {
+  background-color: #146f62; /* Blue button for a modern look */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for interactivity */
+  text-transform: uppercase;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #2f855d; /* Darker blue on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+button:active {
+  background-color: #1b7c57; /* Even darker blue when button is pressed */
+  transform: translateY(1px);
+}
