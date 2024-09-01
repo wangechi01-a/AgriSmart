@@ -1,0 +1,16 @@
+/* Global Styles */
+body {
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    color: #333; /* Dark text for good readability */
+    font-family: Arial, sans-serif; /* Clean, modern font */
+
+}
+
+/* Ensure that all elements fit within the viewport */
+html, body {
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
