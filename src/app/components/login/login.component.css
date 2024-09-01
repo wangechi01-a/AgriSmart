@@ -1,0 +1,153 @@
+/* Container styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden; /* To keep crops within the container */
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Floating crops */
+/* Bouncy floating shapes */
+.crop {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #89ecaf; /* Greenish color for the shape */
+  border-radius: 50%; /* Makes the shape circular */
+  opacity: 0.7;
+  animation: bounce 6s infinite ease-in-out;
+}
+
+.crop1 {
+  top: 10%;
+  left: 20%;
+  animation-duration: 5s;
+}
+
+.crop2 {
+  top: 50%;
+  left: 70%;
+  animation-duration: 7s;
+  animation-delay: 1s;
+}
+
+.crop3 {
+  top: 80%;
+  left: 40%;
+  animation-duration: 9s;
+  animation-delay: 2s;
+}
+
+.crop4 {
+  top: 30%;
+  left: 80%;
+  animation-duration: 6s;
+  animation-delay: 3s;
+}
+
+/* Keyframes for bouncy floating animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Start at original position */
+  }
+  20% {
+    transform: translateY(-30px); /* Move up slightly */
+  }
+  40% {
+    transform: translateY(15px); /* Move down past original position */
+  }
+  60% {
+    transform: translateY(-15px); /* Move up slightly */
+  }
+  80% {
+    transform: translateY(7px); /* Move down slightly */
+  }
+}
+
+/* Login form styles */
+.login-form {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 2.5rem;
+  max-width: 420px;
+  width: 100%;
+  position: relative;
+  z-index: 1; /* In front of the floating crops */
+}
+
+.login-form h2 {
+  margin-bottom: 1.8rem;
+  font-size: 1.75rem;
+  color: #2d2d2d;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #89ecaf, #6e7d6d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #89ecaf, #6e7d6d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #56ab2f;
+  box-shadow: 0 0 8px rgba(86, 171, 47, 0.5);
+  outline: none;
+}
+
+button {
+  background-color: #19c65b;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #89ecaf;
+  transform: translateY(-5px);
+}
+
+button:active {
+  background-color: #116531;
+  transform: translateY(2px);
+}
