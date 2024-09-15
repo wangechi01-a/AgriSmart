@@ -14,11 +14,11 @@ AgriSmart delivers a comprehensive platform that integrates advanced machine lea
 - Early Warning System: Incorporates predictive models to detect potential pest outbreaks or weather anomalies, allowing farmers to take preventive action.
   
 ## Technologies Used
-Machine Learning Frameworks: For predictive modeling and optimization.
-Data Visualization: Tableau and Seaborn for creating clear and actionable insights.
-Big Data Tools: Used for handling large agricultural datasets and making data-driven predictions.
-Python: For data cleaning, feature engineering, and model development.
-Cloud Platforms: For scalability and real-time data processing, ensuring the solution is accessible to farmers across different regions.
+- Machine Learning Frameworks: For predictive modeling and optimization.
+- Data Visualization: Tableau and Seaborn for creating clear and actionable insights.
+- Big Data Tools: Used for handling large agricultural datasets and making data-driven predictions.
+- Python: For data cleaning, feature engineering, and model development.
+- Cloud Platforms: For scalability and real-time data processing, ensuring the solution is accessible to farmers across different regions.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.7.
 
