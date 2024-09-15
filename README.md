@@ -1,9 +1,9 @@
 # AgriSmart
 ## Overview
-AgriSmart is an innovative project designed to tackle food insecurity by leveraging modern technologies in agriculture. The project focuses on enhancing farming practices, optimizing crop yield, and improving food distribution systems. It aligns with Sustainable Development Goal 2 (SDG 2): Zero Hunger, aiming to end hunger, ensure access to nutritious food, and promote sustainable agriculture practices.
+AgriSmart is an innovative project designed to tackle food insecurity In Kenya by leveraging modern technologies in agriculture. The project focuses on enhancing farming practices, optimizing crop yield, and improving food distribution systems. It aligns with Sustainable Development Goal 2 (SDG 2): Zero Hunger, aiming to end hunger, ensure access to nutritious food, and promote sustainable agriculture practices.
 
 ## Objective
-The primary objective of the AgriSmart project is to optimize agricultural practices through data-driven decision-making, empowering local farmers to increase productivity, reduce waste, and improve food distribution. The project also aims to enhance food security by providing actionable insights on crop management, soil quality, and resource allocation, thereby contributing to the fight against hunger in vulnerable communities.
+The primary objective of the AgriSmart project is to optimize agricultural practices through data-driven decision-making, empowering local farmers to increase productivity, reduce waste, and improve food distribution. The project also aims to enhance food security by providing actionable insights on crop management, soil quality, and resource allocation, thereby contributing to the fight against hunger in vulnerable Kenyan Communities.
 
 ## Solution
 AgriSmart delivers a comprehensive platform that integrates advanced machine learning algorithms with agricultural data to support decision-making. The solution offers the following features:
