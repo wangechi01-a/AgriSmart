@@ -1,5 +1,5 @@
-import pandas as pd
 import streamlit as st
+import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -20,9 +20,19 @@ max_humidity = st.sidebar.slider('Max Humidity (%)', 0.0, 100.0, 100.0)
 min_temperature = st.sidebar.slider('Min Temperature (°C)', 0.0, 50.0, 0.0)
 max_temperature = st.sidebar.slider('Max Temperature (°C)', 0.0, 50.0, 50.0)
 
+# Filter by pH range
+min_ph = st.sidebar.slider('Min pH', 0.0, 14.0, 0.0)
+max_ph = st.sidebar.slider('Max pH', 0.0, 14.0, 14.0)
+
+# Filter by rainfall range
+min_rainfall = st.sidebar.slider('Min Rainfall (mm)', 0.0, 300.0, 0.0)
+max_rainfall = st.sidebar.slider('Max Rainfall (mm)', 0.0, 300.0, 300.0)
+
 # Apply filters
 filtered_df = df[(df['humidity'] >= min_humidity) & (df['humidity'] <= max_humidity) &
-                 (df['temperature'] >= min_temperature) & (df['temperature'] <= max_temperature)]
+                 (df['temperature'] >= min_temperature) & (df['temperature'] <= max_temperature) &
+                 (df['ph'] >= min_ph) & (df['ph'] <= max_ph) &
+                 (df['rainfall'] >= min_rainfall) & (df['rainfall'] <= max_rainfall)]
 
 # Display filtered data
 st.write(f"### Showing {filtered_df.shape[0]} crop types")
@@ -53,10 +63,27 @@ ax.set_ylabel('Temperature (°C)')
 ax.set_title('Temperature vs Humidity')
 st.pyplot(fig)
 
-# Pie chart of crop distribution
-st.subheader('Crop Distribution')
-crop_counts = filtered_df['crop_type'].value_counts()
-fig, ax = plt.subplots()
-ax.pie(crop_counts, labels=crop_counts.index, autopct='%1.1f%%', startangle=90)
-ax.set_title('Crop Distribution')
-st.pyplot(fig)
+# Barplot Function for Comparison Graph
+def crop_relation_visual(yfeature, df):
+    st.subheader(f'Crops Relation with {yfeature}')
+    
+    # Create a bar plot
+    plt.figure(figsize=(15, 8))
+    sns.set_style('whitegrid')
+    
+    ax = sns.barplot(x="label", y=yfeature, data=df, ci=None)
+    
+    ax.bar_label(ax.containers[0], fontsize=12)
+    
+    plt.xticks(rotation=90, fontsize=14)
+    plt.yticks(rotation=0, fontsize=14)
+    plt.title(f'Crops Relation with {yfeature}', fontsize=24)
+    plt.xlabel("Crops Name", fontsize=18)
+    plt.ylabel(f"Values of {yfeature}", fontsize=18)
+    
+    # Render the plot in Streamlit
+    st.pyplot(plt.gcf())
+
+# Visualizations for pH and Rainfall
+crop_relation_visual('ph', filtered_df)
+crop_relation_visual('rainfall', filtered_df)
